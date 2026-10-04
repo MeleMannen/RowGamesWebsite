@@ -31,7 +31,11 @@ export type Bezel =
   | "iPhone Air Cloud White"
   | "iPhone Air Sky Blue"
   | "iPhone Air Light Gold"
-  | "iPhone Air Space Black";
+  | "iPhone Air Space Black"
+  | "iPhone 18 Pro Black"
+  | "iPhone 18 Pro Burgundy"
+  | "iPhone 18 Pro Glacier"
+  | "iPhone 18 Pro Silver";
 
 export type FontStyle = "sans" | "mono" | "rounded" | "whimsical" | "cursive";
 

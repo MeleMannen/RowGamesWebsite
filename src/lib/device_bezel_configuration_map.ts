@@ -99,4 +99,34 @@ export const DEVICE_BEZEL_CONFIGURATION_MAP: Record<Bezel, BezelConfiguration> =
       verticalOffset: 72,
       shadowBottomOffset: -4,
     },
+
+    // iPhone 18 Pro
+    "iPhone 18 Pro Black": {
+      src: "/app_view/bezels/iphone_18_pro/black_portrait.png",
+      maskSrc: "/app_view/bezels/iphone_18_pro/mask.png",
+      horizontalOffset: 72,
+      verticalOffset: 69,
+      shadowBottomOffset: -2,
+    },
+    "iPhone 18 Pro Burgundy": {
+      src: "/app_view/bezels/iphone_18_pro/burgundy_portrait.png",
+      maskSrc: "/app_view/bezels/iphone_18_pro/mask.png",
+      horizontalOffset: 72,
+      verticalOffset: 69,
+      shadowBottomOffset: -2,
+    },
+    "iPhone 18 Pro Glacier": {
+      src: "/app_view/bezels/iphone_18_pro/glacier_portrait.png",
+      maskSrc: "/app_view/bezels/iphone_18_pro/mask.png",
+      horizontalOffset: 72,
+      verticalOffset: 69,
+      shadowBottomOffset: -2,
+    },
+    "iPhone 18 Pro Silver": {
+      src: "/app_view/bezels/iphone_18_pro/silver_portrait.png",
+      maskSrc: "/app_view/bezels/iphone_18_pro/mask.png",
+      horizontalOffset: 72,
+      verticalOffset: 69,
+      shadowBottomOffset: -2,
+    },
   };

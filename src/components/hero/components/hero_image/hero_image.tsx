@@ -129,6 +129,7 @@ export function HeroImage({ src, srcset, alt, bezel }: HeroImageProps) {
           alt=""
           width={592}
           height={68}
+          suppressHydrationWarning
           style={{ width: "100%", height: "auto" }}
         />
       </div>
