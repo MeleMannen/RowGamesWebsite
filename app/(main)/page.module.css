@@ -206,6 +206,10 @@
 }
 
 .gameScreenshot {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   transition: transform 400ms cubic-bezier(0.2, 0.7, 0.3, 1);
 }
@@ -371,6 +375,10 @@
 }
 
 .progressScreenshot {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center 42%;
   transition: transform 400ms cubic-bezier(0.2, 0.7, 0.3, 1);

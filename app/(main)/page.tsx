@@ -113,7 +113,8 @@ export default function Page() {
                 <Image
                   src={`${IMAGE_PATH}${game.image}`}
                   alt={game.alt}
-                  fill
+                  width={1320}
+                  height={2868}
                   sizes="(max-width: 560px) 90vw, (max-width: 850px) 44vw, 30vw"
                   className={styles.gameScreenshot}
                 />
@@ -168,7 +169,8 @@ export default function Page() {
               <Image
                 src={`${IMAGE_PATH}10-statistics-overview.png`}
                 alt="Row Games statistics showing games played, win rate, wins, losses, draws, and opponent records."
-                fill
+                width={1320}
+                height={2868}
                 sizes="(max-width: 560px) 90vw, 48vw"
                 className={styles.progressScreenshot}
               />
@@ -184,7 +186,8 @@ export default function Page() {
               <Image
                 src={`${IMAGE_PATH}12-history.png`}
                 alt="Row Games history with past Tic Tac Toe, 4 in a Row, and Nim matches."
-                fill
+                width={1320}
+                height={2868}
                 sizes="(max-width: 560px) 90vw, 48vw"
                 className={styles.progressScreenshot}
               />
