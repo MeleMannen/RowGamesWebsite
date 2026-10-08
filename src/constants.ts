@@ -15,7 +15,7 @@ export const THEME: "system" | "light" | "dark" = "dark";
  *
  * Example: "6502667826"
  */
-export const APP_ID = "6740833142";
+export const APP_ID = "6475875255";
 
 /**
  * Custom fonts for 'whimsical' and 'cursive' font styles.
@@ -43,13 +43,13 @@ export const MATERIAL_SYMBOLS = [
 // Neutral
 export const COLORS: ColorScheme = {
   LIGHT: {
-    "text-primary": "#142014",
-    "text-secondary": "rgba(44, 76, 52, 0.66)",
+    "text-primary": "#101b2c",
+    "text-secondary": "rgba(37, 58, 87, 0.7)",
     "fill-0": "#ffffff",
-    "fill-1": "#eef7f0",
-    "fill-2": "#dcefe0",
-    "fill-3": "#c8e2ce",
-    "accent-brand": "#2f8a57",
+    "fill-1": "#f1f6ff",
+    "fill-2": "#e4edfb",
+    "fill-3": "#d1def2",
+    "accent-brand": "#3478f6",
     "accent-orange": "#f58a4a",
     "accent-green": "#34C759",
     "accent-red": "#FF3B30",
@@ -60,13 +60,13 @@ export const COLORS: ColorScheme = {
     "accent-pink": "#FF2D55",
   },
   DARK: {
-    "text-primary": "#f2fbf5",
-    "text-secondary": "rgba(200, 224, 206, 0.7)",
-    "fill-0": "#0b140f",
-    "fill-1": "#101b14",
-    "fill-2": "#1b2c22",
-    "fill-3": "#264032",
-    "accent-brand": "#2FA956",
+    "text-primary": "#f1f6ff",
+    "text-secondary": "rgba(190, 207, 232, 0.72)",
+    "fill-0": "#0a1220",
+    "fill-1": "#0e1727",
+    "fill-2": "#17243a",
+    "fill-3": "#263750",
+    "accent-brand": "#3478f6",
     "accent-orange": "#ff9a4a",
     "accent-green": "#30D158",
     "accent-red": "#FF453A",

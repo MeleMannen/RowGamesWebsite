@@ -13,6 +13,8 @@ export function RatingLaurelsBadge({
 	caption,
 	showStars = true,
 }: RatingLaurelsBadgeProps) {
+	const formattedRating = rating.toFixed(1);
+
 	return (
 		<LaurelsBadge
 			header={
@@ -23,9 +25,9 @@ export function RatingLaurelsBadge({
 				)
 			}
 			caption={caption}
-			ariaLabel={`App rating badge showing rating ${rating}`}
+			ariaLabel={`App rating badge showing rating ${formattedRating}`}
 		>
-			<div className={styles.ratingValue}>{rating}</div>
+			<div className={styles.ratingValue}>{formattedRating}</div>
 		</LaurelsBadge>
 	);
 }

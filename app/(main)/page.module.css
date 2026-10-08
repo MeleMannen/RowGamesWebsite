@@ -1,8 +1,584 @@
-.waitlistSpacer {
-  flex-grow: 1;
+.page {
+  --brand-blue: #74aaff;
+  --game-blue: #1685ff;
+  --muted-blue: #91a9c9;
+  --surface-raised: color-mix(in srgb, var(--color-fill-2) 78%, #0a1220);
+  --color-accent-brand: #3478f6;
+  --color-text-accent-brand: #ffffff;
+
+  width: min(1080px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 66px 0 28px;
 }
 
-.finalAction {
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 0.96fr;
+  align-items: center;
+  gap: 36px;
+  min-height: 650px;
+  padding: 24px 0 54px;
+}
+
+.heroCopy {
+  position: relative;
+  z-index: 1;
+  padding: 0 0 16px 6px;
+  animation: rise-in 700ms ease both;
+}
+
+.ratingBadge {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 28px;
+}
+
+.eyebrow,
+.sectionKicker,
+.gameNumber {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  margin-bottom: 20px;
+  color: var(--color-text-secondary);
+}
+
+.hero h1 {
+  max-width: 610px;
+  font-size: clamp(44px, 5.1vw, 66px);
+  font-weight: 740;
+  letter-spacing: -0.075em;
+  line-height: 0.99;
+}
+
+.hero h1 span {
+  color: var(--brand-blue);
+}
+
+.heroDescription {
+  max-width: 455px;
+  margin-top: 26px;
+  color: var(--color-text-secondary);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.heroActions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text-primary);
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 160ms ease;
+}
+
+.textLink:hover {
+  color: var(--brand-blue);
+}
+
+.textLink span {
+  color: var(--brand-blue);
+}
+
+.availability {
+  margin-top: 18px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+}
+
+.heroArtwork {
+  position: relative;
+  display: grid;
+  height: 650px;
+  place-items: center;
+  isolation: isolate;
+  animation: rise-in 780ms 100ms ease both;
+}
+
+.artGlow {
+  position: absolute;
+  z-index: -1;
+  width: min(460px, 110%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--game-blue) 19%, transparent),
+    color-mix(in srgb, var(--brand-blue) 9%, transparent) 46%,
+    transparent 72%
+  );
+  filter: blur(12px);
+}
+
+.gamesSection,
+.opponentsSection,
+.progressSection,
+.closingSection {
+  scroll-margin-top: 120px;
+}
+
+.gamesSection {
+  padding-top: 36px;
+}
+
+.sectionHeading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 25px;
+}
+
+.sectionKicker {
+  margin-bottom: 10px;
+  color: var(--brand-blue);
+}
+
+.sectionHeading h2,
+.progressHeading h2,
+.closingSection h2 {
+  font-size: clamp(32px, 4.4vw, 48px);
+  font-weight: 690;
+  letter-spacing: -0.065em;
+  line-height: 1.05;
+}
+
+.sectionHeading > p {
+  max-width: 210px;
+  padding-bottom: 4px;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  text-align: right;
+}
+
+.gameGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.gameCard {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--color-fill-3) 76%, transparent);
+  border-radius: 22px;
+  background: var(--surface-raised);
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.gameCard:hover {
+  transform: translateY(-5px);
+  border-color: color-mix(in srgb, var(--brand-blue) 38%, var(--color-fill-3));
+  box-shadow: 0 18px 38px color-mix(in srgb, #000000 20%, transparent);
+}
+
+.gameVisual {
+  position: relative;
+  height: clamp(300px, 31vw, 350px);
+  overflow: hidden;
+  background: #030504;
+}
+
+.gameVisual::after {
+  position: absolute;
+  inset: 58% 0 0;
+  background: linear-gradient(to bottom, transparent, color-mix(in srgb, #050706 20%, transparent));
+  content: "";
+  pointer-events: none;
+}
+
+.gameScreenshot {
+  object-fit: cover;
+  transition: transform 400ms cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.gameCard:hover .gameScreenshot {
+  transform: scale(1.025);
+}
+
+.nimScreenshot .gameScreenshot {
+  object-position: 50% 39%;
+}
+
+.fourScreenshot .gameScreenshot {
+  object-position: 50% 66%;
+}
+
+.ticScreenshot .gameScreenshot {
+  object-position: 50% 66%;
+}
+
+.gameInfo {
+  padding: 20px 21px 23px;
+}
+
+.gameNumber {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--muted-blue);
+  font-size: 8px;
+}
+
+.gameInfo h3,
+.progressCopy h3 {
+  font-size: 23px;
+  font-weight: 675;
+  letter-spacing: -0.045em;
+}
+
+.gameInfo p,
+.progressCopy p {
+  margin-top: 7px;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.opponentsSection {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 80px;
+  align-items: center;
+  margin-top: 112px;
+  padding: 54px 0 60px;
+  border-top: 1px solid color-mix(in srgb, var(--color-fill-3) 66%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-fill-3) 66%, transparent);
+}
+
+.opponentIntro h2 {
+  font-size: clamp(34px, 4.5vw, 50px);
+  font-weight: 690;
+  letter-spacing: -0.065em;
+  line-height: 1.08;
+}
+
+.opponentIntro > p:last-child {
+  max-width: 350px;
+  margin-top: 18px;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.opponentList {
+  border-top: 1px solid color-mix(in srgb, var(--color-fill-3) 70%, transparent);
+}
+
+.opponentItem {
+  display: grid;
+  grid-template-columns: 37px 1fr 20px;
+  gap: 12px;
+  align-items: center;
+  padding: 17px 4px;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-fill-3) 70%, transparent);
+}
+
+.opponentNumber {
+  color: var(--muted-blue);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 10px;
+}
+
+.opponentItem h3 {
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.opponentItem p {
+  margin-top: 3px;
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.opponentArrow {
+  color: var(--brand-blue);
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.opponentItem:hover .opponentArrow {
+  transform: translate(2px, -2px);
+  opacity: 1;
+}
+
+.progressSection {
+  margin-top: 100px;
+}
+
+.progressHeading {
+  margin-bottom: 26px;
+}
+
+.progressGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.progressCard {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--color-fill-3) 76%, transparent);
+  border-radius: 22px;
+  background: var(--surface-raised);
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.progressCard:hover {
+  transform: translateY(-5px);
+  border-color: color-mix(in srgb, var(--brand-blue) 38%, var(--color-fill-3));
+  box-shadow: 0 18px 38px color-mix(in srgb, #000000 20%, transparent);
+}
+
+.progressVisual {
+  position: relative;
+  height: clamp(300px, 31vw, 350px);
+  overflow: hidden;
+  background: #030504;
+}
+
+.progressVisual::after {
+  position: absolute;
+  inset: 55% 0 0;
+  background: linear-gradient(to bottom, transparent, color-mix(in srgb, #050706 26%, transparent));
+  content: "";
+  pointer-events: none;
+}
+
+.progressScreenshot {
+  object-fit: cover;
+  object-position: center 42%;
+  transition: transform 400ms cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.progressCard:hover .progressScreenshot {
+  transform: scale(1.025);
+}
+
+.progressCopy {
+  padding: 20px 21px 24px;
+}
+
+.progressCopy h3 {
+  font-size: 19px;
+}
+
+.progressCopy p {
+  max-width: 400px;
+}
+
+.closingSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 108px;
+  padding: 68px 20px 82px;
+  border: 1px solid color-mix(in srgb, var(--brand-blue) 22%, var(--color-fill-3));
+  border-radius: 28px;
+  background:
+    radial-gradient(ellipse at 50% 120%, color-mix(in srgb, var(--brand-blue) 14%, transparent), transparent 66%),
+    linear-gradient(145deg, color-mix(in srgb, var(--color-fill-2) 68%, #14284a), var(--surface-raised));
+  text-align: center;
+}
+
+.closingSection h2 {
+  font-size: clamp(38px, 5vw, 58px);
+}
+
+.closingSection > p:not(.sectionKicker) {
+  margin: 12px 0 25px;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
+
+@keyframes rise-in {
+  from {
+    transform: translateY(14px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 850px) {
+  .page {
+    width: min(680px, calc(100% - 40px));
+    padding-top: 45px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-top: 28px;
+  }
+
+  .heroCopy {
+    padding-left: 0;
+  }
+
+  .heroArtwork {
+    height: 600px;
+  }
+
+  .gamesSection {
+    padding-top: 24px;
+  }
+
+  .gameGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gameCard:last-child {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gameCard:last-child .gameVisual {
+    height: 100%;
+    min-height: 300px;
+  }
+
+  .opponentsSection {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    margin-top: 92px;
+  }
+
+  .opponentIntro > p:last-child {
+    max-width: 470px;
+  }
+}
+
+@media (max-width: 560px) {
+  .page {
+    width: calc(100% - 32px);
+    padding-top: 30px;
+  }
+
+  .hero {
+    min-height: initial;
+    padding: 19px 0 16px;
+  }
+
+  .ratingBadge {
+    margin-bottom: 22px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 9px;
+  }
+
+  .hero h1 {
+    font-size: clamp(35px, 9.6vw, 46px);
+  }
+
+  .heroDescription {
+    margin-top: 18px;
+    font-size: 15px;
+  }
+
+  .heroActions {
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 23px;
+  }
+
+  .heroArtwork {
+    height: 520px;
+    margin: 0 -5px;
+  }
+
+  .sectionHeading {
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sectionHeading > p {
+    text-align: left;
+  }
+
+  .gameGrid,
+  .progressGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .gameCard:last-child {
+    display: block;
+  }
+
+  .gameCard:last-child .gameVisual {
+    height: 310px;
+    min-height: initial;
+  }
+
+  .gameVisual {
+    height: 310px;
+  }
+
+  .opponentsSection {
+    gap: 25px;
+    margin-top: 76px;
+    padding: 43px 0;
+  }
+
+  .opponentItem {
+    grid-template-columns: 29px 1fr 16px;
+    gap: 9px;
+  }
+
+  .progressSection {
+    margin-top: 77px;
+  }
+
+  .progressHeading {
+    margin-bottom: 20px;
+  }
+
+  .progressVisual {
+    height: 310px;
+  }
+
+  .closingSection {
+    margin-top: 78px;
+    padding: 50px 17px 58px;
+    border-radius: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroCopy,
+  .heroArtwork {
+    animation: none;
+  }
 }

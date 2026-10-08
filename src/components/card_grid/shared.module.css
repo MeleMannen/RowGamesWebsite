@@ -3,7 +3,7 @@
 
 	--min-width: calc((100% - var(--card-gap) * 2) / 3);
 	--color-base-background: var(--color-fill-0);
-	--color-wordlr-emerald-glow: #19d86a;
+	--color-row-games-blue-glow: #74aaff;
 	--tilt-rotate-x: 0deg;
 	--tilt-rotate-y: 0deg;
 	--tilt-glow-x: 50%;
@@ -17,7 +17,7 @@
 	background:
 		radial-gradient(
 			circle at var(--tilt-glow-x) var(--tilt-glow-y),
-			color-mix(in srgb, var(--color-wordlr-emerald-glow) 0%, transparent) 0%,
+			color-mix(in srgb, var(--color-row-games-blue-glow) 0%, transparent) 0%,
 			transparent 44%
 		),
 		color-mix(in srgb, var(--color-base-background) 50%, transparent);
@@ -46,15 +46,15 @@
 		background:
 			radial-gradient(
 				circle at var(--tilt-glow-x) var(--tilt-glow-y),
-				color-mix(in srgb, var(--color-wordlr-emerald-glow) 24%, transparent) 0%,
-				color-mix(in srgb, var(--color-wordlr-emerald-glow) 9%, transparent) 32%,
+				color-mix(in srgb, var(--color-row-games-blue-glow) 24%, transparent) 0%,
+				color-mix(in srgb, var(--color-row-games-blue-glow) 9%, transparent) 32%,
 				transparent 64%
 			),
-			color-mix(in srgb, var(--color-wordlr-emerald-glow) 7%, var(--color-base-background) 72%);
-		border-color: color-mix(in srgb, var(--color-wordlr-emerald-glow) 42%, var(--color-fill-0));
+			color-mix(in srgb, var(--color-row-games-blue-glow) 7%, var(--color-base-background) 72%);
+		border-color: color-mix(in srgb, var(--color-row-games-blue-glow) 42%, var(--color-fill-0));
 		box-shadow:
 			inset 0 0 25px var(--color-fill-0),
-			0 18px 48px color-mix(in srgb, var(--color-wordlr-emerald-glow) 24%, transparent);
+			0 18px 48px color-mix(in srgb, var(--color-row-games-blue-glow) 24%, transparent);
 	}
 
 	&.third {
@@ -99,7 +99,7 @@
 		background:
 			radial-gradient(
 				circle at var(--tilt-glow-x) var(--tilt-glow-y),
-				color-mix(in srgb, var(--color-wordlr-emerald-glow) 0%, transparent) 0%,
+				color-mix(in srgb, var(--color-row-games-blue-glow) 0%, transparent) 0%,
 				transparent 44%
 			),
 			color-mix(in srgb, var(--color-base-background) 70%, transparent);
@@ -110,15 +110,15 @@
 			background:
 				radial-gradient(
 					circle at var(--tilt-glow-x) var(--tilt-glow-y),
-					color-mix(in srgb, var(--color-wordlr-emerald-glow) 28%, transparent) 0%,
-					color-mix(in srgb, var(--color-wordlr-emerald-glow) 11%, transparent) 34%,
+					color-mix(in srgb, var(--color-row-games-blue-glow) 28%, transparent) 0%,
+					color-mix(in srgb, var(--color-row-games-blue-glow) 11%, transparent) 34%,
 					transparent 66%
 				),
-				color-mix(in srgb, var(--color-wordlr-emerald-glow) 8%, var(--color-base-background) 82%);
-			border-color: color-mix(in srgb, var(--color-wordlr-emerald-glow) 48%, var(--color-fill-3));
+				color-mix(in srgb, var(--color-row-games-blue-glow) 8%, var(--color-base-background) 82%);
+			border-color: color-mix(in srgb, var(--color-row-games-blue-glow) 48%, var(--color-fill-3));
 			box-shadow:
 				inset 0 0 25px var(--color-fill-2),
-				0 18px 52px color-mix(in srgb, var(--color-wordlr-emerald-glow) 28%, transparent);
+				0 18px 52px color-mix(in srgb, var(--color-row-games-blue-glow) 28%, transparent);
 		}
 	}
 }

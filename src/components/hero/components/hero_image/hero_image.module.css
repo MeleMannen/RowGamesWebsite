@@ -28,8 +28,8 @@
     background:
       radial-gradient(
         circle at var(--hero-glow-x) var(--hero-glow-y),
-        color-mix(in srgb, #19d86a 48%, transparent) 0%,
-        color-mix(in srgb, #19d86a 20%, transparent) 34%,
+        color-mix(in srgb, #3478f6 48%, transparent) 0%,
+        color-mix(in srgb, #3478f6 20%, transparent) 34%,
         transparent 68%
       );
     filter: blur(28px);
@@ -52,14 +52,14 @@
   object-fit: contain;
   object-position: center;
   filter:
-    drop-shadow(0 8px 46px color-mix(in srgb, #19d86a 24%, transparent))
+    drop-shadow(0 8px 46px color-mix(in srgb, #3478f6 24%, transparent))
     drop-shadow(0 8px 20px rgb(0 0 0 / 0.42));
   transition: filter 180ms ease;
 }
 
 .heroImage:hover .imageCanvas {
   filter:
-    drop-shadow(0 10px 66px color-mix(in srgb, #19d86a 40%, transparent))
+    drop-shadow(0 10px 66px color-mix(in srgb, #3478f6 40%, transparent))
     drop-shadow(0 10px 24px rgb(0 0 0 / 0.48));
 }
 

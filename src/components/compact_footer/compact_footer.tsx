@@ -27,7 +27,7 @@ export function CompactFooter({
     <footer className={styles.compactFooter}>
       <div className={styles.main}>
         {appIconHref ? (
-          <a className={styles.appIcon} href={appIconHref} aria-label="Wordlr home">
+          <a className={styles.appIcon} href={appIconHref} aria-label="Row Games home">
             {appIcon}
           </a>
         ) : (

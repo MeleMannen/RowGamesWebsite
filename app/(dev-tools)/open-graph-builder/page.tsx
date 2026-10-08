@@ -15,9 +15,9 @@ export default function OpenGraphBuilderPage() {
 					* Adjust the screenshot crop if needed
 				*/}
         <OpenGraphPreview
-          title="Wordlr"
-          iconSrc="favicon.png"
-          screenshotSrc="/app_view/app_images/gameplay_words_solve_animation.png"
+          title="Row Games"
+          iconSrc="/favicon.png"
+          screenshotSrc="/app_view/app_images/04-nim-midgame.png"
           bezel="iPhone 16 Pro Max Space Black"
           bezelCrop={{ edge: "bottom", croppedRatio: 0.40 }}
           theme="dark"

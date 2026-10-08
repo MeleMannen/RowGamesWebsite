@@ -1,54 +1,28 @@
 .downloadActionButton {
-  --button-rotate-x: 0deg;
-  --button-rotate-y: 0deg;
-  --button-glow-x: 50%;
-  --button-glow-y: 50%;
   --button-scale: 1;
-  --button-green: #19d86a;
 
   &:link,
   &:visited {
     display: block;
     color: var(--color-text-accent-brand);
-    background:
-      radial-gradient(
-        circle at var(--button-glow-x) var(--button-glow-y),
-        color-mix(in srgb, var(--button-green) 0%, transparent) 0%,
-        transparent 60%
-      ),
-      var(--color-accent-brand);
+    background: var(--color-accent-brand);
     border-radius: 999px;
     border: none;
-    box-shadow: 0 0 0 color-mix(in srgb, var(--button-green) 0%, transparent);
-    transform:
-      perspective(600px)
-      rotateX(var(--button-rotate-x))
-      rotateY(var(--button-rotate-y))
-      scale(var(--button-scale));
-    transform-style: preserve-3d;
+    transform: scale(var(--button-scale));
     transition:
       background 180ms ease,
       box-shadow 180ms ease,
-      color 180ms ease,
       transform 180ms ease;
-    will-change: transform;
   }
 
   &:hover {
     --button-scale: 1.04;
 
     color: #ffffff;
-    background:
-      radial-gradient(
-        circle at var(--button-glow-x) var(--button-glow-y),
-        color-mix(in srgb, #ffffff 24%, transparent) 0%,
-        color-mix(in srgb, var(--button-green) 42%, transparent) 44%,
-        transparent 76%
-      ),
-      color-mix(in srgb, var(--button-green) 86%, #063015);
+    background: color-mix(in srgb, var(--color-accent-brand) 82%, #10284d);
     box-shadow:
-      0 14px 32px color-mix(in srgb, var(--button-green) 36%, transparent),
-      0 0 0 1px color-mix(in srgb, var(--button-green) 42%, transparent);
+      0 14px 32px color-mix(in srgb, var(--color-accent-brand) 36%, transparent),
+      0 0 0 1px color-mix(in srgb, var(--color-accent-brand) 42%, transparent);
   }
 
   &:active {
@@ -66,6 +40,12 @@
   .appleLogo {
     position: relative;
     top: -1px;
+    z-index: 1;
+    color: #ffffff;
+
+    svg {
+      fill: currentColor;
+    }
   }
 
   .downloadLabel {

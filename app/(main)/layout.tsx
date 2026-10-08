@@ -19,15 +19,11 @@ export const metadata: Metadata = {
   /**
    * `title` and `description` are visible in search results.
    * Recommended length for title is max 60 characters.
-   * Recommended length for description is max 160 characters.
-   */
-  title: "Wordlr - Guess the word",
-  description: "A flexible word game with 1-8 letter puzzles, multiple languages, searchable word lists, definitions, stats, and history.",
-
-  /**
-   * Your website URL.
-   */
-  metadataBase: new URL("https://www.wordlr.app"),
+    * Recommended length for description is max 160 characters.
+    */
+  title: "Row Games",
+  description:
+    "Play Nim, Connect 4, and Tic Tac Toe against friends or three levels of Siri. Track your stats and revisit every match in Row Games.",
 
   /**
    * Info inside `openGraph` and `twitter` is used to show rich previews
@@ -37,23 +33,24 @@ export const metadata: Metadata = {
    * run the dev server and go to `http://localhost:3000/open-graph-builder`.
    */
   openGraph: {
-    title: "Wordlr - Guess the word",
-    description: "A flexible word game with 1-8 letter puzzles, multiple languages, searchable word lists, definitions, stats, and history.",
-    url: "https://www.wordlr.app",
+    title: "Row Games",
+    description:
+      "Play Nim, Connect 4, and Tic Tac Toe against friends or three levels of Siri. Track your stats and revisit every match in Row Games.",
+    type: "website",
     images: [
       {
         url: "/og-preview.png",
-        width: 1200,
+        width: 1280,
         height: 720,
-        alt: "",
+        alt: "Row Games icon with Nim gameplay shown on an iPhone.",
       },
     ],
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wordlr",
-    description: "A flexible word game with 1-8 letter puzzles, multiple languages, searchable word lists, definitions, stats, and history.",
+    title: "Row Games",
+    description:
+      "Three classic games, four ways to play. Take on a friend or Siri in Nim, Connect 4, and Tic Tac Toe.",
     images: ["/og-preview.png"],
   },
 };
@@ -87,9 +84,9 @@ export default function RootLayout({
           {!IS_WAITLIST_ENABLED && (
             <Navbar
               icon={<AppIcon src="/favicon.png" />}
-              appName="Wordlr - Guess the word"
+              appName="Row Games"
               links={[
-                { label: "Features", href: "#features" },
+                { label: "Games", href: "#games" },
                 // Uncomment the line below once you're ready to start using Release Notes
                 // { label: "Release Notes", href: "/release-notes" },
                 { label: "Support", href: "/support" },
@@ -112,19 +109,13 @@ export default function RootLayout({
             }
             appIconHref="/"
             links={[
-              { label: "Features", href: "/#features" },
+              { label: "Games", href: "/#games" },
               { label: "Support", href: "/support" },
               { label: "Privacy Policy", href: "/privacy" },
               {
                 label: "Terms of Use",
                 href: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
                 external: true,
-              },
-              {
-                label: "Follow Updates",
-                href: "https://x.com/WordlrApp",
-                external: true,
-                icon: "x",
               },
             ]}
             footnoteLeading={`© ${new Date().getFullYear()}. All rights reserved.`}
