@@ -1,4 +1,5 @@
 import { APP_ID, IS_WAITLIST_ENABLED, THEME } from "@/constants";
+import { Instrument_Sans } from "next/font/google";
 import type { Metadata, Viewport } from "next";
 
 import { AppIcon } from "@/components/app_icon/app_icon";
@@ -12,6 +13,12 @@ import { VercelAnalytics } from "@/components/vercel_analytics/vercel_analytics"
 import { VercelSpeedInsights } from "@/components/vercel_speed_insights/vercel_speed_insights";
 import "@/global.css";
 import { ThemeProvider } from "@/providers/theme_provider";
+
+const instrumentSans = Instrument_Sans({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+});
 
 const TELEMETRYDECK_APP_ID = process.env.NEXT_PUBLIC_TELEMETRYDECK_APP_ID;
 const DEPLOYMENT_HOST =
@@ -72,7 +79,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-theme={THEME}>
+    <html lang="en" data-theme={THEME} className={instrumentSans.variable}>
       <head>
         {/* This makes Safari on iOS show the App Store download banner */}
         {!IS_WAITLIST_ENABLED && (
