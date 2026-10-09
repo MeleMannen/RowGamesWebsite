@@ -27,19 +27,18 @@
     "@apple/app-store-server-library": "^3.1.0",
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
-    "@next/mdx": "16.3.4",
+    "@next/mdx": "16.4.0",
     "@plausible-analytics/tracker": "^0.4.4",
     "@telemetrydeck/sdk": "^2.0.4",
     "@types/mdx": "^2.0.13",
     "@vercel/analytics": "^1.6.1",
     "@vercel/speed-insights": "^2.0.0",
     "chroma-js": "^3.2.0",
-    "next": "16.3.4",
+    "next": "16.4.0",
     "react": "19.3.0",
     "react-dom": "19.3.0",
     "remark-frontmatter": "^5.0.0",
-    "remark-mdx-frontmatter": "^5.2.0",
-    "resend": "^6.17.2"
+    "remark-mdx-frontmatter": "6.0.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.58.2",
@@ -49,8 +48,8 @@
     "@types/react": "19.3.0",
     "baseline-browser-mapping": "^2.10.0",
     "eslint": "9.39.5",
-    "eslint-config-next": "16.3.4",
-    "sharp": "^0.35.4",
+    "eslint-config-next": "16.4.0",
+    "sharp": "^0.35.5",
     "typescript": "5.9.3"
   },
   "browserslist": [

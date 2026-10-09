@@ -14,8 +14,14 @@ import "@/global.css";
 import { ThemeProvider } from "@/providers/theme_provider";
 
 const TELEMETRYDECK_APP_ID = process.env.NEXT_PUBLIC_TELEMETRYDECK_APP_ID;
+const DEPLOYMENT_HOST =
+  process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL;
+const SITE_ORIGIN =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (DEPLOYMENT_HOST ? `https://${DEPLOYMENT_HOST}` : "http://localhost:3000");
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_ORIGIN),
   /**
    * `title` and `description` are visible in search results.
    * Recommended length for title is max 60 characters.
